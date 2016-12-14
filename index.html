@@ -37,7 +37,7 @@
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
-     <nav class="navbar navbar-default navbar-fixed-top">
+     <nav id="navbar" class="navbar navbar-default navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -48,12 +48,12 @@
             </button>
           <a class="navbar-brand" href="#">Veronica Mihai</a>
         </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav navbar-right">
-            <li ><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#contact">Contact</a></li>
+        <div  class="navbar-collapse collapse">
+          <ul id="top-menu" class="nav navbar-nav navbar-right">
+            <li ><a href="#home" class="active" data-menu-top="0">Home</a></li>
+            <li><a href="#about" data-menu-top="450" >About</a></li>
+            <li><a href="#portfolio" data-menu-top="850">Portfolio</a></li>
+            <li><a href="#contact" data-menu-top="4300">Contact</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -65,9 +65,9 @@
 		        	<div class="hsContainer">
 
 			    		<div class="hsContent" data-center="opacity: 1" data-106-top="opacity: 0" data-anchor-target="#slide-1 h2">
-			    		<a name="home"></a>
+			    		
 				    		<h2 class="headLine">Software Developer Freelancer</h2>
-				    			 <p class="links">
+				    			 <p id="home" data-menu-offset="0" class="links">
 						            <a href="https://github.com/VeronicaM"  target="_blank"><i class="fa fa-github" aria-hidden="true"></i> GitHub </a>
 						            <a href="https://ro.linkedin.com/in/veronica-mihai90" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i> LinkedIn </a>
 						            <a href="https://www.freecodecamp.com/veronicam" target="_blank"><i class="fa fa-free-code-camp" aria-hidden="true"></i> Freecodecamp </a>
@@ -84,8 +84,9 @@
 			    		<div class="hsContent">
 							<p data-anchor-target="#slide-2 p">
 					    		<div class="row" data-center="opacity: 1" data--200-bottom="opacity: 0" data-206-top="opacity: 1" data-106-top="opacity: 0" data-anchor-target="#slide-2 p">
+					    	
 					    			<div class="col-md-6">
-					    				<p class="intro">
+					    				<p id="about"  data-menu-offset="400" class="intro">
 					    				Fullstack Web developer, Agile Enthusiast, Polyglot with a passion for knowledge and exploration   
 										</p>
 										<div class="skill">
@@ -120,7 +121,8 @@
 					    		<div class="hsContent" style="padding: 2% 0 4% 0 !important;">
 					    		<p data-anchor-target="#slide-3 p"> 
 						    		<div data-center="opacity: 1" data--200-bottom="opacity: 0" data-26-top="opacity: 1" data-16-top="opacity: 0" data-anchor-target="#slide-3 p">
-						    		<span class="portfolio">Some of my most recent work</span>
+						    	
+						    		<span id="portfolio"  data-menu-offset="650" class="portfolio">Some of my most recent work</span>
 						    			 <div class="wrap">
 											<div class="box">
 											    <div class="boxInner">
@@ -213,7 +215,8 @@
 		    	<div class="bcg bcg3" data-300-bottom="opacity: 0;" data-100-bottom="opacity: 1;" data-anchor-target="#slide-5">
 			    	<div class="hsContainer">
 				    	<div class="hsContent" data-100-bottom="opacity: 0;" data-bottom="opacity: 1;" data-anchor-target="#slide-5">
-				    		<h2>Contact at: mihaiveronica@ymail.com</h2>
+				         
+				    		<h2 ><span id="contact" data-menu-offset="4300">Contact at: mihaiveronica@ymail.com</span></h2>
 				    
 			    		</div>
 			    	</div>

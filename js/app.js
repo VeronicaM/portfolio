@@ -16,7 +16,18 @@
 	$slideTall = $('.homeSlideTall');
 	$slideTall2 = $('.homeSlideTall2');
 	$body = $('body');
-	
+var lastId,
+    topMenu = $("#top-menu"),
+    topMenuHeight = topMenu.outerHeight(),
+    // All list items
+    menuItems = topMenu.find('a[href*="#"]'),
+    // Anchors corresponding to menu items
+    scrollItems = menuItems.map(function(){
+      var item = $($(this).attr("href"));
+      if (item.length) { return item; }
+    });	
+
+
     //FadeIn all sections   
 	$body.imagesLoaded( function() {
 		setTimeout(function() {
@@ -29,55 +40,40 @@
 			  
 		}, 800);
 	});
-	
-	function adjustWindow(){
-		
-		// Init Skrollr
-		var s = skrollr.init({
-		    render: function(data) {
 		    
-		        //Debugging - Log the current scroll position.
-		        //console.log(data.curTop);
-		    }
+		// Bind to scroll
+		$(window).scroll(function(){
+		   // Get container scroll position
+		      var fromTop = jQuery(this).scrollTop()+topMenuHeight;
+
+               // Get id of current scroll item
+               var cur = scrollItems.map(function(){
+                 if (jQuery(this)[0].attributes[1].nodeValue < fromTop)
+                   return this;
+               });
+
+               // Get the id of the current element
+               cur = cur[cur.length-1];
+               var id = cur && cur.length ? cur[0].id : "";               
+
+              menuItems.parent().children().removeClass("active");
+               if(id){
+                    menuItems.parent().end().filter("[href*='#"+id+"']").parent().children()[0].className="active";
+               }                 
 		});
-		skrollr.menu.init(s, {
-		    //skrollr will smoothly animate to the new position using `animateTo`.
-		    animate: true,
+	function adjustWindow(){
+	
+		// Init Skrollr
+			var s = skrollr.init({
+					forceHeight: false,
+					smoothScrolling: true,
+					smoothScrollingDuration: 150
+				});
 
-		    //The easing function to use.
-		    easing: 'sqrt',
-
-
-		    //How long the animation should take in ms.
-		    duration: function(currentTop, targetTop) {
-		        //By default, the duration is hardcoded at 500ms.
-		        return 500;
-
-		        //But you could calculate a value based on the current scroll position (`currentTop`) and the target scroll position (`targetTop`).
-		        //return Math.abs(currentTop - targetTop) * 10;
-		    },
-
-		    //If you pass a handleLink function you'll disable `data-menu-top` and `data-menu-offset`.
-		    //You are in control where skrollr will scroll to. You get the clicked link as a parameter and are expected to return a number.
-		    handleLink: function(link) {
-		        return 400;//Hardcoding 400 doesn't make much sense.
-		    },
-
-		    //By default skrollr-menu will only react to links whose href attribute contains a hash and nothing more, e.g. `href="#foo"`.
-		    //If you enable `complexLinks`, skrollr-menu also reacts to absolute and relative URLs which have a hash part.
-		    //The following will all work (if the user is on the correct page):
-		    //http://example.com/currentPage/#foo
-		    //http://example.com/currentDir/currentPage.html?foo=bar#foo
-		    ///?foo=bar#foo
-		    complexLinks: false,
-
-		    //This event is triggered right before we jump/animate to a new hash.
-		    change: function(newHash, newTopPosition) {
-		        //Do stuff
-		    },
-
-		    //Add hash link (e.g. `#foo`) to URL or not.
-		    updateUrl: false //defaults to `true`.
+				skrollr.menu.init(s, {
+					easing: 'outCubic',
+		            animate: true,
+					duration: 500
 		});
 		// Get window size
 	    winH = $window.height();
