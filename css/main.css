@@ -149,6 +149,16 @@ body {
 	height: 100%;
 	width: 100%;
 }
+.centerText{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color:yellow;
+}
 /* Slide 1 */
 #slide-1 .bcg {background-image:url('../img/bcg_slide-1.jpg')}
 #navbar{
