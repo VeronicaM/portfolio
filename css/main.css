@@ -160,6 +160,16 @@ body {
     color:yellow;
 }
 /* Slide 1 */
+.footer{
+    bottom: 0px;
+    width: 100%;
+    font-size: 18px;
+    color: white;
+    padding: 18px;
+    text-align: center;
+    border-top: 1px solid gold;
+    background-color: black;
+}
 #slide-1 .bcg {background-image:url('../img/bcg_slide-1.jpg')}
 #navbar{
     background-color: #779298;
