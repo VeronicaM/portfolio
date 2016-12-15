@@ -170,6 +170,26 @@ body {
     border-top: 1px solid gold;
     background-color: black;
 }
+.end{
+    font-size: 13px;
+    line-height: 2;
+    text-align: right;
+    width: 100% !important;
+    margin-top: 100px !important;
+}
+.end span{
+    text-align: center;
+}
+.end b{
+    font-weight: 800;
+    color:#E0FFFF;
+}
+.end i{
+    color:#FFE4E1;
+}
+#contact{
+    color:#FFD700;
+}
 #slide-1 .bcg {background-image:url('../img/bcg_slide-1.jpg')}
 #navbar{
     background-color: #779298;
@@ -244,11 +264,7 @@ body {
 #slide-4 .bcg {background-image:url('../img/bcg_slide-4.jpg')}
 
 /* Slide 5 */
-#slide-5 {position: relative;}
-#slide-5 .bcg {background-image:url('../img/bcg_slide-5.jpg')}
-#slide-5 .bcg2 {background-image:url('../img/bcg_slide-5b.jpg'); position: fixed; bottom: 0; left: 0; opacity: 0; z-index: 1}
-#slide-5 .bcg3 {background: none; background-color: #010101; z-index: 2;  position: fixed; bottom: 0; left: 0; opacity: 0; z-index: 2}
-
+#slide-5 .bcg {background: none; background-color: #010101; height: 650px; text-align: center}
 .hsContainer {
 	display: table;
 	table-layout: fixed;
