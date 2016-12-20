@@ -66,7 +66,7 @@ var lastId,
 			winH = 550;
 		} 
 	    // Init Skrollr for 768 and up
-	    if( winW>= 830) {
+	    if( winW>= 918) {
 	        // Init Skrollr
 	       // Init Skrollr
 			var s = skrollr.init({
