@@ -452,7 +452,18 @@ body.no-touch .boxInner:hover .titleBox, body.touch .boxInner.touchFocus .titleB
    Modify as content requires.
    ========================================================================== */
 @media only screen and (max-width : 480px) {
-   /* Small desktop / ipad view */
+    #slide-4 h2{
+    font-size: 20px;
+    line-height: 1;
+  }
+   #slide-5 .bcg{
+    background-color: rgb(1,27,59);
+   }
+   .contactSlide{
+        margin-left: -70%;
+        margin-right: 54%;
+        margin-top: -40%;
+   }
    .headLine{
         outline-width: 2px;
         width: 60%;
@@ -583,6 +594,14 @@ body.no-touch .boxInner:hover .titleBox, body.touch .boxInner.touchFocus .titleB
         }
 }
  @media only screen and (max-width : 918px) and (min-width : 481px){
+
+  #slide-5 .bcg{
+    background-color: rgb(1,27,59);
+   }
+   .contactSlide{
+        margin-left: -50%;
+        margin-right: 30%;
+   }
   .wrap{
     flex-direction:column;
     justify-content: center;
