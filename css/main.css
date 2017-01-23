@@ -322,6 +322,7 @@ body {
 }
 .boxInner img {
    width: 100%;
+   height: 200px;
 }
 .boxInner .titleBox {
     display: none;
