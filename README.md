@@ -1,2 +1,2 @@
-# portfolio
-Hosted at https://veronicam.github.io/portfolio/#home 
+
+Showcast of some of my projects 
